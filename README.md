@@ -1,6 +1,6 @@
 # Lista de Tarefas
 
-Esta é uma aplicação web criada com React de uma lista de tarefas, nela é possível adicionar, remover ou editar as tarefas colocadas, tendo também um Status de como está essa tarefa em questão, sendo "Pendente" se ainda não foi executada, "Finalizada" ou "Cancelada".
+Esta é uma aplicação web criada em Angular de uma lista de tarefas, nela é possível adicionar, remover ou editar as tarefas colocadas, tendo também um Status de como está essa tarefa em questão, sendo "Pendente" se ainda não foi executada, "Finalizada" ou "Cancelada".
  Podendo seu Status também ser alterado, além da alteração da própria tarefa. Suas tarefas são salvas em um banco de dados PostgreSQL e persistidos com o ORM sequelize, por meio de um código back-end em Node.JS, servindo de servidor local para a aplicação web.
 
 
@@ -16,7 +16,7 @@ Com esse comando voce dara inicio ao servidor local que estar execudando na port
 
 * npm start
 
-Com esse comando voce dara inicio a aplicação web que estar execudando na porta localhost:3000, sendo essa a padrão do React.
+Com esse comando voce dara inicio a aplicação web que estar execudando na porta localhost:4200, sendo essa a padrão do Angular.
 
 ## A aplicação:
 
@@ -83,7 +83,7 @@ https://www.postgresql.org/download/
 
 <table>
   <tr>
-    <td>React </td>
+    <td>Angular </td>
     <td>Javascript</td>
     <td>Node.js</td>
     <td>PostgreSQL</td>
