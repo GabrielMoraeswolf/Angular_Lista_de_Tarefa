@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: 100%;
+    width:  100%;
+   
+    background-image: url('../../assets/wallpaper-azul.jpg');
+    font-family: Verdana;
+  }
+  .containerBox{
+    border-radius: 15px;
+    border: 1px solid #e4e4e4;
+    background-color: #00A9FF;
+    padding: 25px;
+  }
+  .titule{
+    display: flex;
+    border: 1px solid #fafafa;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    background-color: #190482;
+    padding: 5px;
+  }
+  .buttonList{
+    color: #fafafa;
+    margin: 5px ;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    background-color: #1D24CA;
+    padding: 3px 5px;
+    font-size: 1rem
+  }
+  .buttonFilter{
+    margin-top: 5px;
+    margin-left: 15px;
+    color: #fafafa;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    background-color: #1B3C73;
+    padding: 3px 5px;
+    font-size: 0.9rem
+  }
+  .buttonFilterClean{
+    margin-top: 5px;
+    margin-left: 25px;
+    color: #fafafa;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    background-color: #2656A3;
+    padding: 3px 5px;
+    font-size: 0.9rem
+  }
+  .footer{
+    position: fixed;  
+  }
+    

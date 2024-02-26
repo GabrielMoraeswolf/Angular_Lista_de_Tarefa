@@ -1,0 +1,44 @@
+<li *ngIf="task">
+  <ng-container *ngIf="isEditing; else viewMode">
+    <input
+      type="text"
+      [(ngModel)]="task.descricao"
+      class="input"
+    />
+    <div>
+      <label>
+        <input
+          type="radio"
+          value="Pendente"
+          [checked]="task.status === 'Pendente'"
+          (change)="setUpdatedStatus('Pendente')"
+        />
+        Pendente
+      </label>
+      <label>
+        <input
+          type="radio"
+          value="Finalizada"
+          [checked]="task.status === 'Finalizada'"
+          (change)="setUpdatedStatus('Finalizada')"
+        />
+        Finalizada
+      </label>
+      <label>
+        <input
+          type="radio"
+          value="Cancelada"
+          [checked]="task.status === 'Cancelada'"
+          (change)="setUpdatedStatus('Cancelada')"
+        />
+        Cancelada
+      </label>
+    </div>
+    <button (click)="handleSave()" class="buttonSave">Salvar</button>
+  </ng-container>
+  <ng-template #viewMode>
+    {{ task.descricao }} ({{ task.status }})
+    <button (click)="handleEdit()" class="button">Editar</button>
+    <button (click)="removeTask.emit(task.id)" class="button">Remover</button>
+  </ng-template>
+</li>

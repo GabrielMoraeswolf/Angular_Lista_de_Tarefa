@@ -1,0 +1,45 @@
+
+<main class="container">
+  <div class="containerBox">
+    <h2 class="titule">Lista de Tarefas</h2>
+    <app-task-form (addTask)="addTask($event)"></app-task-form>
+    <button (click)="showAllTasksHandler()" class="buttonList">Lista de Tarefas</button>
+    <div>
+      <h4>Filtrar Tarefas</h4>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="Pendente"
+            [checked]="filterStatus === 'Pendente'"
+            (change)="filterStatusHandler('Pendente')"
+          />
+          Pendente
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            value="Finalizada"
+            [checked]="filterStatus === 'Finalizada'"
+            (change)="filterStatusHandler('Finalizada')"
+          />
+          Finalizada
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            value="Cancelada"
+            [checked]="filterStatus === 'Cancelada'"
+            (change)="filterStatusHandler('Cancelada')"
+          />
+          Cancelada
+        </label>
+      </div>
+      <button (click)="filterTasksHandler()" class="buttonFilter">Filtrar Tarefas</button>
+      <button (click)="clearFilterHandler()" class="buttonFilterClean">Limpar Filtro</button>
+    </div>
+    <app-task-list *ngIf="showAllTasks" [tasks]="tasks" (editTask)="editTask($event)" (removeTask)="removeTask($event)"></app-task-list>
+  </div>
+</main>
